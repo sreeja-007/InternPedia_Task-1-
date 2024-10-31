@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer Portfolio</title>
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background-color: #f0f4f8; /* Slightly lighter background */
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+        }
+
+        p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, #6a4c93, #a59dc4); /* Softer gradient */
+            color: white;
+            padding: 80px 20px; /* Reduced padding */
+            text-align: center;
+            position: relative;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px; /* Reduced padding */
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Reduced padding */
+        }
+
+        nav .logo {
+            font-size: 1.5rem; /* Reduced font size */
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px; /* Reduced gap */
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 1rem; /* Reduced font size */
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ff5722;
+        }
+
+        .hero-section {
+            padding: 30px 20px; /* Reduced padding */
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem; /* Reduced font size */
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .hero-section p {
+            font-size: 1rem; /* Reduced font size */
+            margin-bottom: 20px;
+            max-width: 500px; /* Reduced max-width */
+            margin: 0 auto;
+        }
+
+        .hero-section .btn {
+            background-color: #3f51b5;
+            color: white;
+            padding: 10px 20px; /* Reduced padding */
+            font-size: 0.9rem; /* Reduced font size */
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero-section .btn:hover {
+            background-color: #5a55d1;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: #f8f8f8; /* Lighter background color */
+            padding: 40px 0; /* Reduced padding */
+        }
+
+        .about-section .content-wrapper {
+            display: flex;
+            align-items: center;
+            max-width: 1000px; /* Reduced max-width */
+            margin: 0 auto;
+            padding: 0 20px; /* Reduced padding */
+            justify-content: space-between;
+        }
+
+        .about-section .text {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .about-section .text-container {
+            width: 600px; /* Kept the width */
+            height: auto; /* Changed to auto for flexibility */
+            border: 2px solid #e8b3d0; /* Border for the rectangular box */
+            border-radius: 10px; /* Rounded corners */
+            background-color: #fff; /* Background color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            color: #333; /* Darker text for contrast */
+            font-size: 0.9rem; /* Reduced font size */
+        }
+
+        .about-section .image-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-section .image-section img {
+            width: 250px; /* Reduced width */
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-section .btn {
+            background-color: #3f51b5;
+            color: rgb(104, 87, 162);
+            padding: 10px 20px; /* Reduced padding */
+            font-size: 0.9rem; /* Reduced font size */
+            border-radius: 30px;
+            transition: background-color 0.3s ease;
+        }
+
+        .about-section .btn:hover {
+            background-color: #5a55d1;
+        }
+
+        /* Skills Section */
+        .skills-section {
+            background-color: #fff;
+            padding: 40px 0; /* Reduced padding */
+            text-align: center;
+        }
+
+        .skills-section h2 {
+            font-size: 2rem; /* Reduced font size */
+            margin-bottom: 30px; /* Reduced margin */
+            color: #333;
+        }
+
+        .skills-wrapper {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1000px; /* Reduced max-width */
+            margin: 0 auto;
+        }
+
+        .skill {
+            background-color: #8266a9;
+            padding: 15px; /* Reduced padding */
+            border-radius: 15px;
+            width: 28%; /* Adjusted width */
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px); /* Reduced hover effect */
+        }
+
+        .skill span {
+            font-size: 2rem; /* Reduced font size */
+            color: #c376e2;
+        }
+
+        .skill h3 {
+            font-size: 1.3rem; /* Reduced font size */
+            margin: 10px 0; /* Reduced margin */
+        }
+
+        .skill p {
+            font-size: 0.9rem; /* Reduced font size */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0; /* Reduced padding */
+        }
+
+        .footer-info {
+            display: flex;
+            justify-content: space-around;
+            max-width: 1000px; /* Reduced max-width */
+            margin: 0 auto;
+        }
+
+        .footer-info .column h3 {
+            font-size: 1.2rem; /* Reduced font size */
+            margin-bottom: 15px; /* Reduced margin */
+        }
+
+        .footer-info .column p {
+            font-size: 0.9rem; /* Reduced font size */
+            line-height: 1.6;
+        }
+
+        footer p {
+            font-size: 0.8rem; /* Reduced font size */
+            text-align: center;
+            margin-top: 15px; /* Margin for spacing */
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="top-bar">
+            <div class="contact-info">Need a Developer? dev@example.com | 800 123 4567</div>
+            <div class="social-icons">
+                <!-- Add social media icons here -->
+            </div>
+        </div>
+        <nav>
+            <div class="logo">DevPro</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-section">
+            <h1>Hi, I'm a Software Engineer</h1>
+            <p>I create innovative solutions and improve user experience.</p><br>
+            <a href="#projects" class="btn">See My Work</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="content-wrapper">
+            <div class="text">
+                <div class="text-container">
+                    <p>Hello! I'm a passionate software engineer with experience in building applications that improve productivity and user experience. I love tackling challenges and learning new technologies.</p>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="C:\Users\DELL\OneDrive\Documents\fsd\finall.png" alt="About Me">
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills-section" id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-wrapper">
+            <div class="skill">
+                <span>💻</span>
+                <h3>Web Development</h3>
+                <p>HTML, CSS, JavaScript, React</p>
+            </div>
+            <div class="skill">
+                <span>📱</span>
+                <h3>Mobile Development</h3>
+                <p>Flutter, React Native</p>
+            </div>
+            <div class="skill">
+                <span>⚙️</span>
+                <h3>Backend Development</h3>
+                <p>Node.js, Express, MongoDB</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <div class="column">
+                <h3>Contact</h3>
+                <p>Email: dev@example.com</p>
+                <p>Phone: 800 123 4567</p>
+            </div>
+            <div class="column">
+                <h3>Social</h3>
+                <p>LinkedIn</p>
+                <p>GitHub</p>
+            </div>
+        </div>
+        <p>&copy; 2024 DevPro. All rights reserved.</p>
+    </footer>
+</body>
+</html>
